@@ -95,7 +95,7 @@ namespace utilities {
 		}
 
 		//split a const char pointer with _sep char as separator
-		static std::vector<std::string> __cdecl split(cchar_p& text, cchar_p& _sep) {
+		static std::vector<std::string> __cdecl split(cchar_p& text, cchar& _sep) {
 			std::string sep = "";
 			sep += _sep;
 			return ustr::_split(std::string(text), sep);
