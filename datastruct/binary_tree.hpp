@@ -11,8 +11,8 @@ namespace datastruct {
         using _HiPred = HigherPredicate;
         using _EqPred = EqualPredicate;
     public:
-        BinaryTree(const _HiPred& _left, const _EqPred& _equals) :
-		    BasicBinaryTree<Ty, _HiPred, _EqPred>(_left, _equals) {}
+        BinaryTree(const _HiPred& _lower, const _EqPred& _equals) :
+		    BasicBinaryTree<Ty, _HiPred, _EqPred>(_lower, _equals) {}
 	    ~BinaryTree() { delete this->root; this->root = nullptr; }
 
 	    void __cdecl insert(const Ty& value) { this->_insert(this->root, const_cast<Ty&>(value), this->_lower); this->_c_height(); }

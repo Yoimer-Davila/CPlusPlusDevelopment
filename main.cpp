@@ -1,9 +1,13 @@
 #include "utility/numbers.hpp"
 #include "utility/ustrings.hpp"
 #include "datastruct/binary_tree.hpp"
+#include "datastruct/avl_tree_list.hpp"
+#include "datastruct/avl_tree.hpp"
 #include <iostream>
 using utilities::Ustring;
 using datastruct::BinaryTree;
+using datastruct::AvlTreeList;
+using datastruct::AvlTree;
 using datastruct::comparevalues::higher;
 using datastruct::comparevalues::equals;
 using datastruct::comparevalues::lower;
@@ -27,8 +31,8 @@ template<typename Ty>
 void func(Ty function){}
 
 int main() {
-
-	BinaryTree<test, lmbbool<test>, lmbbool<test>> tree(
+	srand(time(nullptr));
+	AvlTree<test, lmbbool<test>, lmbbool<test>> tree(
 		[](test& i, test& j) {return i.value > j.value; },
 		[](test& i, test& j) {return i.value == j.value; });
 
