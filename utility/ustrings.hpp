@@ -65,9 +65,9 @@ namespace utilities {
 			return end - start;
 		}
 
-		static cchar& __cdecl _to_lower(cchar& character) { return character >= 'A' && character <= 'Z' ? character - 'A' + 'a' : character; }
+		static cchar __cdecl _to_lower(cchar& character) { return character >= 'A' && character <= 'Z' ? character - 'A' + 'a' : character; }
 
-		static cchar& __cdecl _to_upper(cchar& character) { return character >= 'a' && character <= 'z' ? character - 'a' + 'A' : character; }
+		static cchar __cdecl _to_upper(cchar& character) { return character >= 'a' && character <= 'z' ? character - 'a' + 'A' : character; }
 
 		//apply function to every character until count, _function is a function that return a char
 		template<typename Function>
@@ -120,13 +120,13 @@ namespace utilities {
 		static cchar_p __cdecl to_lower(cchar_p characters, cll& start, cll& count) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, count, ustr::_to_lower, start); }
 
 		//return the lower value of every character in string
-		const std::string& __cdecl to_lower(std::string& text) {
+		static const std::string& __cdecl to_lower(std::string& text) {
 			for_each(text.begin(), text.end(), [](char& i) {i = ustr::_to_lower(i); });
 			return text;
 		}
 
 		//return the lower value of every character in string until count
-		const std::string& __cdecl to_lower(std::string& text, cll& count) {
+		static const std::string& __cdecl to_lower(std::string& text, cll& count) {
 			for (ll i = 0; i < text.size(); ++i)
 				text.at(i) = i < count ? ustr::_to_lower(text.at(i)) : text.at(i);
 
@@ -134,7 +134,7 @@ namespace utilities {
 		}
 
 		//return the lower value of every character in string since start until count
-		const std::string& __cdecl to_lower(std::string& text, cll& start, cll& count) {
+		static const std::string& __cdecl to_lower(std::string& text, cll& start, cll& count) {
 			for (ll i = start; i < text.size(); ++i)
 				text.at(i) = i < count ? ustr::_to_lower(text.at(i)) : text.at(i);
 
@@ -145,19 +145,19 @@ namespace utilities {
 		static cchar __cdecl to_upper(cchar character) { return ustr::_to_upper(character); }
 
 		//return the lower value of every character
-		cchar_p __cdecl to_upper(cchar_p characters) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, size, ustr::_to_upper); }
+		static cchar_p __cdecl to_upper(cchar_p characters) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, size, ustr::_to_upper); }
 
 		//return the upper value of every character until count
-		cchar_p __cdecl to_upper(cchar_p characters, cll& count) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, count, ustr::_to_upper); }
+		static cchar_p __cdecl to_upper(cchar_p characters, cll& count) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, count, ustr::_to_upper); }
 
 		//return the upper value of every character since start until count
-		cchar_p __cdecl to_upper(cchar_p characters, cll& start, cll& count) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, count, ustr::_to_upper); }
+		static cchar_p __cdecl to_upper(cchar_p characters, cll& start, cll& count) { cll size = ustr::pchar_size(characters); return ustr::_transform_char_count(characters, size, count, ustr::_to_upper); }
 		
 		//return the upper value of every character in string
-		const std::string __cdecl to_upper(std::string& text) { for_each(text.begin(), text.end(), [](char& i) {i = ustr::_to_upper(i); }); return text; }
+		static const std::string __cdecl to_upper(std::string& text) { for_each(text.begin(), text.end(), [](char& i) {i = ustr::_to_upper(i); }); return text; }
 
 		//return the upper value of every character in string until count
-		const std::string __cdecl to_upper(std::string& text, cll& count) {
+		static const std::string __cdecl to_upper(std::string& text, cll& count) {
 			for (ll i = 0; i < text.size(); ++i)
 				text[i] = i < count ? ustr::_to_upper(text[i]) : text[i];
 
@@ -165,7 +165,7 @@ namespace utilities {
 		}
 
 		//return the upper value of every character in string since start until count
-		const std::string __cdecl to_upper(std::string& text, cll& start, cll& count) {
+		static const std::string __cdecl to_upper(std::string& text, cll& start, cll& count) {
 			for (ll i = start; i < text.size(); ++i)
 				text[i] = i < count ? ustr::_to_upper(text[i]) : text[i];
 

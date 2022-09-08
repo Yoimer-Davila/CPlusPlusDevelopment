@@ -41,7 +41,7 @@ int main() {
 
 	tree.in_order([](const test& i) {cout << i.value << " "; });
 
-	cout << endl << Ustring::to_lower("HELLO");
+	cout << endl << Ustring::to_upper("hello");
 
 	cout << std::endl;
 	system("pause");
