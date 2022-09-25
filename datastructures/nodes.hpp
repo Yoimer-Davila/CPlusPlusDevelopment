@@ -1,7 +1,7 @@
 #ifndef __NODES_HPP__
 #define __NODES_HPP__
 
-namespace datastruct {
+namespace datastructures {
 
     //long long
     using ll = long long;

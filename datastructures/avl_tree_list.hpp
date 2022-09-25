@@ -1,7 +1,7 @@
 #ifndef __AVL_TREE_LIST_HPP__
 #define __AVL_TREE_LIST_HPP__
 #include "basic_avl_tree.hpp"
-namespace datastruct {
+namespace datastructures {
     template<typename Ty, typename HigherPredicate, typename EqualsPredicate>
     class AvlTreeList : public BasicAvlTree<Ty, HigherPredicate, EqualsPredicate> {
     

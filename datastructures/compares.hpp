@@ -1,4 +1,4 @@
-namespace datastruct {
+namespace datastructures {
 
     template<typename Ty>
     struct compare {
@@ -42,19 +42,19 @@ namespace datastruct {
     */
     namespace comparevalues {
         template<typename Ty>
-        datastruct::higher<Ty> higher;
+        datastructures::higher<Ty> higher;
 
         template<typename Ty>
-        datastruct::lower<Ty> lower;
+        datastructures::lower<Ty> lower;
 
         template<typename Ty>
-        datastruct::equals<Ty> equals;
+        datastructures::equals<Ty> equals;
 
         template<typename Ty>
-        datastruct::higher_equal<Ty> higher_equal;
+        datastructures::higher_equal<Ty> higher_equal;
 
         template<typename Ty>
-        datastruct::lower_equal<Ty> lower_equal;
+        datastructures::lower_equal<Ty> lower_equal;
     }
 
     namespace lambdavalues {

@@ -1,18 +1,18 @@
 #include "utility/numbers.hpp"
 #include "utility/ustrings.hpp"
-#include "datastruct/binary_tree.hpp"
-#include "datastruct/avl_tree_list.hpp"
-#include "datastruct/avl_tree.hpp"
+#include "datastructures/binary_tree.hpp"
+#include "datastructures/avl_tree_list.hpp"
+#include "datastructures/avl_tree.hpp"
 #include <iostream>
 using utilities::Ustring;
-using datastruct::BinaryTree;
-using datastruct::AvlTreeList;
-using datastruct::AvlTree;
-using datastruct::comparevalues::higher;
-using datastruct::comparevalues::equals;
-using datastruct::comparevalues::lower;
-using datastruct::ll;
-using namespace datastruct::lambdavalues;
+using datastructures::BinaryTree;
+using datastructures::AvlTreeList;
+using datastructures::AvlTree;
+using datastructures::comparevalues::higher;
+using datastructures::comparevalues::equals;
+using datastructures::comparevalues::lower;
+using datastructures::ll;
+using namespace datastructures::lambdavalues;
 
 
 using std::cout;

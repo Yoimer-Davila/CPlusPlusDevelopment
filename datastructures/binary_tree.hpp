@@ -2,7 +2,7 @@
 #define __BINARY_TREE_HPP__
 #include "basic_binary_tree.hpp"
 
-namespace datastruct {
+namespace datastructures {
 
     template <typename Ty, typename HigherPredicate = higher<Ty>, typename EqualPredicate = equals<Ty>>
     class BinaryTree : public BasicBinaryTree<Ty, HigherPredicate, EqualPredicate> {

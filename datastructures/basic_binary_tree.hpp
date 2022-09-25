@@ -2,16 +2,16 @@
 #define __BASIC_BINARY_TREE_HPP__
 #include "compares.hpp"
 #include "nodes.hpp"
-namespace datastruct {
-	using datastruct::basic_bynode;
+namespace datastructures {
+	using datastructures::basic_bynode;
 	
 	/*struct for compares predicate in binary class*/
-	using datastruct::compare;
-	using datastruct::higher;
-	using datastruct::lower;
-	using datastruct::equals;
-	using datastruct::higher_equal;
-	using datastruct::lower_equal;
+	using datastructures::compare;
+	using datastructures::higher;
+	using datastructures::lower;
+	using datastructures::equals;
+	using datastructures::higher_equal;
+	using datastructures::lower_equal;
 
 
     template <typename Ty, typename HigherPredicate, typename EqualsPredicate>
